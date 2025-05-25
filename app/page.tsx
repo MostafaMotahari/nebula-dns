@@ -160,7 +160,7 @@ export default function DNSShowcase() {
             variant="outline"
             size="sm"
             className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            onClick={() => window.open("#", "_blank")}
+            onClick={() => window.open("https://play.google.com/store/apps/details?id=com.frostnerd.dnschanger&hl=en", "_blank")}
           >
             <Download className="h-4 w-4 mr-2 text-blue-400" />
             DNS App
@@ -169,7 +169,7 @@ export default function DNSShowcase() {
             variant="outline"
             size="sm"
             className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
-            onClick={() => window.open("#", "_blank")}
+            onClick={() => window.open("https://t.me/MousiolHB", "_blank")}
           >
             <MessageCircle className="h-4 w-4 mr-2 text-cyan-400" />
             Telegram
