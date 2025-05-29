@@ -4,12 +4,7 @@ export async function GET() {
   try {
     const checkUrl = "https://check.nebula.mousiol.ir:4443"
 
-    const response = await fetch(checkUrl, {
-      method: "GET",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; DNS-Checker/1.0)",
-      },
-    })
+    const response = await fetch(checkUrl, { method: "GET" })
 
     const data = await response.json()
 
