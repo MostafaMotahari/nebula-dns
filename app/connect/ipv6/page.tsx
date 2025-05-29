@@ -59,15 +59,15 @@ export default function IPv6InstructionsPage() {
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10">
                 <div>
                   <p className="text-sm text-slate-400">Primary DNS</p>
-                  <code className="text-sm font-mono text-white">2606:4700:4700::1111</code>
+                  <code className="text-sm font-mono text-white">2a13:7c00:6:22:f816:3eff:feb0:1ab4</code>
                 </div>
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => copyToClipboard("2606:4700:4700::1111")}
+                  onClick={() => copyToClipboard("2a13:7c00:6:22:f816:3eff:feb0:1ab4")}
                   className="text-white hover:bg-white/10 transition-all duration-200"
                 >
-                  {copiedAddress === "2606:4700:4700::1111" ? (
+                  {copiedAddress === "2a13:7c00:6:22:f816:3eff:feb0:1ab4" ? (
                     <Check className="h-4 w-4 text-green-400" />
                   ) : (
                     <Copy className="h-4 w-4" />
@@ -77,15 +77,15 @@ export default function IPv6InstructionsPage() {
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10">
                 <div>
                   <p className="text-sm text-slate-400">Secondary DNS</p>
-                  <code className="text-sm font-mono text-white">2620:fe::fe</code>
+                  <code className="text-sm font-mono text-white">2a14:ec00:0003:0001:0000:000:6e2a:05b0</code>
                 </div>
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => copyToClipboard("2620:fe::fe")}
+                  onClick={() => copyToClipboard("2a14:ec00:0003:0001:0000:000:6e2a:05b0")}
                   className="text-white hover:bg-white/10 transition-all duration-200"
                 >
-                  {copiedAddress === "2620:fe::fe" ? (
+                  {copiedAddress === "2a14:ec00:0003:0001:0000:000:6e2a:05b0" ? (
                     <Check className="h-4 w-4 text-green-400" />
                   ) : (
                     <Copy className="h-4 w-4" />
@@ -146,8 +146,8 @@ export default function IPv6InstructionsPage() {
                   <div className="space-y-2">
                     <h3 className="text-lg font-medium text-white">Step 6: Enter DNS Addresses</h3>
                     <p className="text-slate-300">
-                      Enter <code className="bg-black/30 px-1 rounded">2606:4700:4700::1111</code> as DNS 1 and{" "}
-                      <code className="bg-black/30 px-1 rounded">2620:fe::fe</code> as DNS 2.
+                      Enter <code className="bg-black/30 px-1 rounded">2a13:7c00:6:22:f816:3eff:feb0:1ab4</code> as DNS 1 and{" "}
+                      <code className="bg-black/30 px-1 rounded">2a14:ec00:0003:0001:0000:000:6e2a:05b0</code> as DNS 2.
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -184,9 +184,9 @@ export default function IPv6InstructionsPage() {
                   <div className="space-y-2">
                     <h3 className="text-lg font-medium text-white">Step 5: Add DNS Servers</h3>
                     <p className="text-slate-300">
-                      Tap "Add Server" and enter <code className="bg-black/30 px-1 rounded">2606:4700:4700::1111</code>,
+                      Tap "Add Server" and enter <code className="bg-black/30 px-1 rounded">2a13:7c00:6:22:f816:3eff:feb0:1ab4</code>,
                       then tap "Add Server" again and enter{" "}
-                      <code className="bg-black/30 px-1 rounded">2620:fe::fe</code>.
+                      <code className="bg-black/30 px-1 rounded">2a14:ec00:0003:0001:0000:000:6e2a:05b0</code>.
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -228,8 +228,8 @@ export default function IPv6InstructionsPage() {
                     <h3 className="text-lg font-medium text-white">Step 5: Enter DNS Addresses</h3>
                     <p className="text-slate-300">
                       Select "Use the following DNS server addresses" and enter{" "}
-                      <code className="bg-black/30 px-1 rounded">2606:4700:4700::1111</code> as the Preferred DNS server
-                      and <code className="bg-black/30 px-1 rounded">2620:fe::fe</code> as the Alternate DNS server.
+                      <code className="bg-black/30 px-1 rounded">2a13:7c00:6:22:f816:3eff:feb0:1ab4</code> as the Preferred DNS server
+                      and <code className="bg-black/30 px-1 rounded">2a14:ec00:0003:0001:0000:000:6e2a:05b0</code> as the Alternate DNS server.
                     </p>
                   </div>
                   <div className="space-y-2">

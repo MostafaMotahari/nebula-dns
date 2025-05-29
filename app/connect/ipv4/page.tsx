@@ -59,15 +59,15 @@ export default function IPv4InstructionsPage() {
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10">
                 <div>
                   <p className="text-sm text-slate-400">Primary DNS</p>
-                  <code className="text-lg font-mono text-white">1.1.1.1</code>
+                  <code className="text-lg font-mono text-white">45.38.139.111</code>
                 </div>
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => copyToClipboard("1.1.1.1")}
+                  onClick={() => copyToClipboard("45.38.139.111")}
                   className="text-white hover:bg-white/10 transition-all duration-200"
                 >
-                  {copiedAddress === "1.1.1.1" ? (
+                  {copiedAddress === "45.38.139.111" ? (
                     <Check className="h-4 w-4 text-green-400" />
                   ) : (
                     <Copy className="h-4 w-4" />
@@ -77,15 +77,15 @@ export default function IPv4InstructionsPage() {
               <div className="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10">
                 <div>
                   <p className="text-sm text-slate-400">Secondary DNS</p>
-                  <code className="text-lg font-mono text-white">9.9.9.9</code>
+                  <code className="text-lg font-mono text-white">193.228.168.150</code>
                 </div>
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => copyToClipboard("9.9.9.9")}
+                  onClick={() => copyToClipboard("193.228.168.150")}
                   className="text-white hover:bg-white/10 transition-all duration-200"
                 >
-                  {copiedAddress === "9.9.9.9" ? (
+                  {copiedAddress === "193.228.168.150" ? (
                     <Check className="h-4 w-4 text-green-400" />
                   ) : (
                     <Copy className="h-4 w-4" />
@@ -146,8 +146,8 @@ export default function IPv4InstructionsPage() {
                   <div className="space-y-2">
                     <h3 className="text-lg font-medium text-white">Step 6: Enter DNS Addresses</h3>
                     <p className="text-slate-300">
-                      Enter <code className="bg-black/30 px-1 rounded">1.1.1.1</code> as DNS 1 and{" "}
-                      <code className="bg-black/30 px-1 rounded">9.9.9.9</code> as DNS 2.
+                      Enter <code className="bg-black/30 px-1 rounded">45.38.139.111</code> as DNS 1 and{" "}
+                      <code className="bg-black/30 px-1 rounded">193.228.168.150</code> as DNS 2.
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -184,8 +184,8 @@ export default function IPv4InstructionsPage() {
                   <div className="space-y-2">
                     <h3 className="text-lg font-medium text-white">Step 5: Add DNS Servers</h3>
                     <p className="text-slate-300">
-                      Tap "Add Server" and enter <code className="bg-black/30 px-1 rounded">1.1.1.1</code>, then tap
-                      "Add Server" again and enter <code className="bg-black/30 px-1 rounded">9.9.9.9</code>.
+                      Tap "Add Server" and enter <code className="bg-black/30 px-1 rounded">45.38.139.111</code>, then tap
+                      "Add Server" again and enter <code className="bg-black/30 px-1 rounded">193.228.168.150</code>.
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -227,8 +227,8 @@ export default function IPv4InstructionsPage() {
                     <h3 className="text-lg font-medium text-white">Step 5: Enter DNS Addresses</h3>
                     <p className="text-slate-300">
                       Select "Use the following DNS server addresses" and enter{" "}
-                      <code className="bg-black/30 px-1 rounded">1.1.1.1</code> as the Preferred DNS server and{" "}
-                      <code className="bg-black/30 px-1 rounded">9.9.9.9</code> as the Alternate DNS server.
+                      <code className="bg-black/30 px-1 rounded">45.38.139.111</code> as the Preferred DNS server and{" "}
+                      <code className="bg-black/30 px-1 rounded">193.228.168.150</code> as the Alternate DNS server.
                     </p>
                   </div>
                   <div className="space-y-2">
