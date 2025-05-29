@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function GET() {
   try {
-    const checkUrl = "http://check.nebula.mousiol.ir"
+    const checkUrl = "https://check.nebula.mousiol.ir:4443"
 
     const response = await fetch(checkUrl, {
       method: "GET",
@@ -15,7 +15,6 @@ export async function GET() {
 
     return NextResponse.json(data, { status: response.status })
   } catch (error) {
-    console.error("DNS check error:", error)
     return NextResponse.json(
       {
         client_ip: "unknown",
@@ -25,7 +24,7 @@ export async function GET() {
         request_subdomain: "",
         status: "error",
       },
-      { status: 500 },
+      { status: 403 },
     )
   }
 }
