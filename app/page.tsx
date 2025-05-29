@@ -10,9 +10,6 @@ import Link from "next/link"
 interface DnsCheckResponse {
   client_ip: string
   ip_version: string
-  log_subdomain: string
-  message: string
-  request_subdomain: string
   status: string
 }
 
@@ -31,8 +28,9 @@ export default function DNSShowcase() {
     setConnectionStatus("checking")
 
     try {
-      // Use our API route to avoid CORS issues
-      const response = await fetch("/api/check-dns")
+      const checkUrl = "https://check.nebula.mousiol.ir:4443"
+
+      const response = await fetch(checkUrl, { method: "GET" })
 
       if (!response.ok) {
         throw new Error(`DNS check failed with status: ${response.status}`)
@@ -60,17 +58,16 @@ export default function DNSShowcase() {
       // Check connection status based on HTTP status code
       if (response.status === 200) {
         setConnectionStatus("connected")
-      } else if (response.status === 403 || response.status === 400) {
-        setConnectionStatus("disconnected")
       } else {
         setConnectionStatus("disconnected")
       }
+
     } catch (error) {
       console.error("Error checking DNS connection:", error)
       setConnectionStatus("disconnected")
 
       // Fallback for demo when the service is not available
-      setUserIpType(Math.random() > 0.5 ? "ipv6" : "ipv4")
+      setUserIpType("ipv4")
       setShowSuggestion(true)
     } finally {
       setIsCheckingConnection(false)
