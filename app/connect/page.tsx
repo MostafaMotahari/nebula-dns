@@ -99,8 +99,8 @@ export default function ConnectPage() {
               </CardHeader>
               <CardContent>
                 <div className="bg-blue-500/20 text-blue-300 rounded-lg p-4 text-center">
-                  <p className="text-lg font-mono">1.1.1.1</p>
-                  <p className="text-lg font-mono mt-2">9.9.9.9</p>
+                  <p className="text-lg font-mono">45.38.139.111</p>
+                  <p className="text-lg font-mono mt-2">193.228.168.150</p>
                 </div>
                 {userIpType === "ipv4" && (
                   <div className="mt-4 bg-amber-500/20 border border-amber-500/30 rounded-lg p-2 text-center">
@@ -125,8 +125,8 @@ export default function ConnectPage() {
               </CardHeader>
               <CardContent>
                 <div className="bg-purple-500/20 text-purple-300 rounded-lg p-4 text-center">
-                  <p className="text-sm font-mono">2606:4700:4700::1111</p>
-                  <p className="text-sm font-mono mt-2">2620:fe::fe</p>
+                  <p className="text-sm font-mono">2a13:7c00:6:22:f816:3eff:feb0:1ab4</p>
+                  <p className="text-sm font-mono mt-2">2a14:ec00:0003:0001:0000:000:6e2a:05b0</p>
                 </div>
                 {userIpType === "ipv6" && (
                   <div className="mt-4 bg-amber-500/20 border border-amber-500/30 rounded-lg p-2 text-center">
