@@ -22,7 +22,9 @@ export default function ConnectPage() {
   useEffect(() => {
     const detectIpVersion = async () => {
       try {
-        const response = await fetch("/api/check-dns")
+        const checkUrl = "https://check.nebula.mousiol.ir:4443"
+
+        const response = await fetch(checkUrl, { method: "GET" })
 
         if (!response.ok) {
           throw new Error(`DNS check failed with status: ${response.status}`)
@@ -34,22 +36,22 @@ export default function ConnectPage() {
         try {
           data = JSON.parse(text)
         } catch (parseError) {
+          setUserIpType(ipVersion)
           console.error("Failed to parse DNS response:", parseError, "Response was:", text)
           throw new Error("Invalid DNS check response")
         }
 
+        console.log("DNS check response:", data)
+
+        // Update IP version from response
         if (data.ip_version) {
           const ipVersion = data.ip_version.toLowerCase() === "ipv4" ? "ipv4" : "ipv6"
           setUserIpType(ipVersion)
-        } else {
-          // Fallback for demo
-          setUserIpType(Math.random() > 0.5 ? "ipv6" : "ipv4")
         }
+
       } catch (error) {
-        console.error("Error detecting IP version:", error)
-        // Fallback for demo
-        setUserIpType(Math.random() > 0.5 ? "ipv6" : "ipv4")
-      }
+        console.error("Error checking DNS connection:", error)
+        setUserIpType("ipv4")
     }
 
     detectIpVersion()
