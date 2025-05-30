@@ -45,13 +45,14 @@ export default function ConnectPage() {
 
         // Update IP version from response
         if (data.ip_version) {
-          const ipVersion = data.ip_version.toLowerCase() === "ipv4" ? "ipv4" : "ipv6"
+          const ipVersion = data.ip_version.toLowerCase() === "ipv4" ? "ipv4" : "ipv4"
           setUserIpType(ipVersion)
         }
 
       } catch (error) {
         console.error("Error checking DNS connection:", error)
         setUserIpType("ipv4")
+      }
     }
 
     detectIpVersion()

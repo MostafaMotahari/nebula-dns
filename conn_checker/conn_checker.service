@@ -1,0 +1,26 @@
+[Unit]
+Description=Starlette Connectivity Checker Server (Uvicorn)
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/root/nebula-dns/
+Environment="PATH=/root/nebula-dns/venv/bin:/usr/local/bin:/usr/bin:/bin"
+
+# Command to start Uvicorn
+ExecStart=/root/nebula-dns/venv/bin/uvicorn \
+          server:app \
+          --host :: \
+          --port 8000
+
+# Auto-restart on failure
+Restart=always
+RestartSec=5
+
+# Logging (systemd will handle logs)
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
